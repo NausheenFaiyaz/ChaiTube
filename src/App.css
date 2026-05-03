@@ -1,0 +1,256 @@
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Sora:wght@400;500;600;700&display=swap');
+
+.page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px;
+  font-family: 'Sora', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.topbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.topbar h1 {
+  margin: 0;
+  font-size: clamp(24px, 3vw, 34px);
+  font-family: 'Bricolage Grotesque', 'Sora', sans-serif;
+  font-weight: 800;
+  letter-spacing: 0.4px;
+  color: #2f1b14;
+  text-shadow: 2px 2px 0 #f4c37a;
+}
+
+.searchbar {
+  display: flex;
+  gap: 8px;
+  width: min(520px, 100%);
+}
+
+.searchbar input {
+  flex: 1;
+  padding: 12px 14px;
+  border-radius: 12px;
+  border: 2px solid #414141;
+  background: #fff;
+}
+
+.searchbar button,
+.pager button {
+  border: 2px solid #2a2430;
+  border-radius: 12px;
+  padding: 11px 16px;
+  background: linear-gradient(145deg, #ff6b72, #f03744);
+  color: #fffdfa;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow:
+    0 5px 0 #7a1f2d,
+    0 9px 18px rgba(59, 17, 28, 0.25);
+  transition: transform 120ms ease, box-shadow 120ms ease, filter 120ms ease;
+}
+
+.searchbar button:hover,
+.pager button:hover {
+  filter: brightness(1.03);
+}
+
+.searchbar button:active,
+.pager button:active {
+  transform: translateY(3px);
+  box-shadow:
+    0 2px 0 #7a1f2d,
+    0 5px 10px rgba(59, 17, 28, 0.2);
+}
+
+.controls {
+  margin-top: 16px;
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.control {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.control label {
+  font-size: 14px;
+  color: #4a5260;
+}
+
+.control select {
+  padding: 8px 10px;
+  border-radius: 10px;
+  border: 2px solid #3f3f3f;
+  background: #fff;
+}
+
+.pill {
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: #ebedf3;
+  font-size: 13px;
+  color: #454e5d;
+}
+
+.status {
+  margin: 20px 0;
+  font-weight: 600;
+}
+
+.status.error {
+  color: #b21f2d;
+}
+
+.video-grid {
+  margin-top: 18px;
+  display: grid;
+  gap: 18px;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+}
+
+.video-card {
+  background: #f7f2ea;
+  border: 2px solid #6f1d2a;
+  border-radius: 22px;
+  padding: 12px;
+  box-shadow: 0 8px 0 #b14558;
+}
+
+.card-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.badge {
+  margin: 0;
+  font-size: 12px;
+  font-weight: 700;
+  color: #6f1d2a;
+}
+
+.menu-dot {
+  border: none;
+  background: transparent;
+  color: #6c6674;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.thumb-frame {
+  border: 2px solid #46444f;
+  border-radius: 14px;
+  overflow: hidden;
+  background: #d8d6d0;
+}
+
+.thumb {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  display: block;
+}
+
+.video-meta {
+  padding: 10px 4px 2px;
+}
+
+.video-meta h2 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.35;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+
+.channel,
+.date {
+  margin: 4px 0 0;
+  font-size: 13px;
+  color: #6c6674;
+}
+
+.desc {
+  margin: 10px 0 0;
+  font-size: 13px;
+  line-height: 1.5;
+  color: #4b4350;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.stats-row {
+  margin-top: 12px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+.mini-stat {
+  border: 2px solid #4d4957;
+  border-radius: 10px;
+  background: #fefcf9;
+  padding: 8px;
+  text-align: center;
+}
+
+.mini-stat span {
+  display: block;
+  font-size: 11px;
+  color: #6f6878;
+}
+
+.mini-stat strong {
+  font-size: 15px;
+}
+
+.watch-btn {
+  margin-top: 10px;
+  width: 100%;
+  display: block;
+  box-sizing: border-box;
+  text-align: center;
+  text-decoration: none;
+  color: #1f1a22;
+  border: 2px solid #28232d;
+  border-radius: 10px;
+  background: #f2c573;
+  padding: 9px 10px;
+  font-weight: 700;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.pager {
+  margin: 24px 0 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.pager button:disabled {
+  background: linear-gradient(145deg, #d3d5db, #bcc2ce);
+  color: #6a7180;
+  border-color: #818998;
+  box-shadow: 0 3px 0 #8f96a3;
+  cursor: not-allowed;
+  transform: none;
+  filter: none;
+}
